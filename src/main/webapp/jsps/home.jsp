@@ -11,7 +11,7 @@
 <body>
 <h1 align="center">Welcome to Tesla car Web application Project 2023.</h1>
 <h1 align="center">We are developing and supporting quality Software Solutions to millions of clients globally.
-	           We are raising millionaires and billionaires IT professionals in over 100 nations.
+	           We are raising millionaires and billionaires IT professionals in over 50 nations.
 	We offer Training for DevOps with Linux, Kubernetes and Cloud Computing, equipping IT Engineers for best performance.
 	Class34 DevOps MasterClass will start today. </h1>
 <hr>
