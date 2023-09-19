@@ -13,6 +13,9 @@ git "https://github.com/Adeyemiogunleye/maven-web-application"
 }
 }
 stage('2.Build, CodeQuality, Upload'){
+agent{
+label 'agent1'
+}
 steps{
 sh "mvn clean package"
 sh "mvn sonar:sonar"
