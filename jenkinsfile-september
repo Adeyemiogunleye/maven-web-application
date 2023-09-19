@@ -27,8 +27,9 @@ deploy adapters: [tomcat9(credentialsId: 'tomcat-credentials', path: '', url: 'h
 stage('4.ManualApproval'){
 steps{
 sh "echo 'Please review application performance' "
-timeout(time:60, unit:'MINUTES')
+timeout(time:60, unit:'MINUTES') {
 input message: 'Application ready for deployment'
+}
 }
 }
 stage('5.deploy2production'){
