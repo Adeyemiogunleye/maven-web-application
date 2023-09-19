@@ -1,7 +1,5 @@
 pipeline {
-agent {
-labels 
-}
+agent any
 tools {
 maven "maven3.9.4"
 }
@@ -29,7 +27,7 @@ deploy adapters: [tomcat9(credentialsId: 'tomcat-credentials', path: '', url: 'h
 stage('4.ManualApproval'){
 steps{
 sh "echo 'Please review application performance' "
-timeout(time:60, unit:'Minutes')
+timeout(time:60, unit:'MINUTES')
 input message: 'Application ready for deployment'
 }
 }
