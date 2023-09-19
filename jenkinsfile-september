@@ -8,7 +8,6 @@ stage('1.Clonecode'){
 agent{
 label 'agent1'
 }
-}
 steps {
 git "https://github.com/Adeyemiogunleye/maven-web-application"
 }
