@@ -1,15 +1,10 @@
 pipeline {
-agent {
-labels 'agent1'
-}
+agent any
 tools {
 maven "maven3.9.4"
 }
 stages{
 stage('1.Clonecode'){
-agent{
-label 'agent1'
-}
 steps {
 git "https://github.com/Adeyemiogunleye/maven-web-application
 }
