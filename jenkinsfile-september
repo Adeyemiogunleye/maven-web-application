@@ -6,7 +6,7 @@ maven "maven3.9.4"
 stages{
 stage('1.Clonecode'){
 steps {
-git "https://github.com/Adeyemiogunleye/maven-web-application
+git "https://github.com/Adeyemiogunleye/maven-web-application"
 }
 }
 stage('2.Build, CodeQuality, Upload'){
