@@ -26,6 +26,7 @@ stage('3.deploy2Uat'){
 steps{
 deploy adapters: [tomcat9(credentialsId: 'tomcat-credentials', path: '', url: 'http://52.71.255.137:8080/')], contextPath: null, war: 'target/*war'
 }
+}
 stage('4.ManualApproval'){
 steps{
 sh "echo 'Please review application performance' "
