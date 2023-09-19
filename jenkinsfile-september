@@ -11,7 +11,7 @@ agent{
 label 'agent1'
 }
 steps {
-git https://github.com/Adeyemiogunleye/maven-web-application
+git "https://github.com/Adeyemiogunleye/maven-web-application"
 }
 }
 stage('2.Build, CodeQuality, Upload'){
