@@ -11,7 +11,7 @@ agent{
 label 'agent1'
 }
 steps {
-git htttp----
+git https://github.com/Adeyemiogunleye/maven-web-application
 }
 }
 stage('2.Build, CodeQuality, Upload'){
@@ -23,7 +23,7 @@ sh "mvn deploy"
 }
 stage('3.deploy2Uat'){
 steps{
-deploy to edit text
+deploy adapters: [tomcat9(credentialsId: 'tomcat-credentials', path: '', url: 'http://18.206.239.97:8080/')], contextPath: null, war: 'target/*war'
 }
 }
 stage('4.ManualApproval'){
@@ -35,12 +35,12 @@ input message: 'Application ready for deployment'
 }
 stage('5.deploy2production'){
 steps{
-deploy to edit text
+deploy adapters: [tomcat9(credentialsId: 'tomcat-credentials', path: '', url: 'http://18.206.239.97:8080/')], contextPath: null, war: 'target/*war'
 }
 }
-stage('6.EmailNotification'){
+stage('6.slackNotification'){
 steps{
-input email pipeline
+slackSend channel: 'jenkins', message: 'Hi guys, you are awesome', teamDomain: 'devops-cam3590', tokenCredentialId: 'Slack-credentials'
 }
 }
 }
