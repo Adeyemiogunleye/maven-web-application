@@ -23,7 +23,7 @@ deploy adapters: [tomcat9(credentialsId: 'tomcat-credentials', path: '', url: 'h
 stage('4.ManualApproval'){
 steps{
 sh "echo 'Please review application performance' "
-timeout(time:60, unit:'Minutes')
+timeout(time:60, unit:'MINUTES')
 input message: 'Application ready for deployment'
 }
 }
@@ -33,7 +33,7 @@ deploy adapters: [tomcat9(credentialsId: 'tomcat-credentials', path: '', url: 'h
 }
 stage('6.EmailNotification'){
 steps{
-input email pipeline
+slackSend channel: 'jenkins', message: 'Hi, this is tuesday'
 }
 }
 }
